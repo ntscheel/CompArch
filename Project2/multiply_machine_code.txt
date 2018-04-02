@@ -1,0 +1,23 @@
+        lw  1 0 times    #load 14 in reg1
+        add 2 0 0        #store 0 in reg2 as counter
+        lw  3 0 mcand    #store mcand in reg3
+        lw  4 0 mplier   #store mplier int reg4
+        lw  5 0 one      #load 1 into reg5 as our checker
+looop   beq  2 1 end     #begin loop from 0 to 14
+        nand 6 4 5       #nand mcplier with checker
+        nand 1 0 0       #load all 1's into reg1
+                                        //lw   1 0 allone  #load 65535 into reg1
+        beq  6 1 zeros   #if result of nand is 11..111, then bit is 0
+else    add  7 7 3       #add mcand to running total
+zeros   add  3 3 3       #shift mcand for next loop
+        add  5 5 5       #double the checker to the next power of 2
+        lw   1 0 one     #load 1 into reg1
+        add  2 2 1       #counter++
+        lw   1 0 times   #reload 14 into reg1
+        beq 0 0 looop    #return to top of loop
+end     halt
+times   .fill 14
+allone  .fill 65535
+one     .fill 1
+mcand   .fill 29562
+mplier  .fill 11834

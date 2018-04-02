@@ -1,0 +1,2 @@
+lab	add	2	3	0	#bad label
+lab	add	2	3	0	#bad label

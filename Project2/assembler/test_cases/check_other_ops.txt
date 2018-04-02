@@ -1,0 +1,5 @@
+	sw	2	0	numb	store reg2 into memory location at 0+6
+	jalr	3	next	store location in 3, jump to next
+numb	.fill	6
+numb2	.fill	4
+next	nand	5	2	numb2	store bitwise nand of reg2 and reg4(?) in reg5

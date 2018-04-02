@@ -1,0 +1,10 @@
+	lw 1 0 foo #reg1 = 3
+	lw 2 0 foo2 # reg2 = 5
+	add 3 1 2 #reg 3 = 3+5
+	add 4 3 3 #reg4 = 8+8
+	sw  4 0 foo 
+	add 5 3 4 #reg4 = 8+16
+	add 6 5 5 #reg6 = 24+24
+	halt
+foo .fill 3
+foo2 .fill 5

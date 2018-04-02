@@ -1,0 +1,10 @@
+	lw	1	0	five	load reg1 with 5
+	lw	2	1	3	load reg2 with -1
+start	add	1	2	1	decrement reg1
+	beq	0	1	2	goto end of program when reg1==0
+	beq	0	0	start	go back to begining of loop Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer elementum volutpat vulputate. Praesent iaculis purus orci, ac suscipit sem commodo non. Quisque venenatis lacus vitae rutrum vulputate. Vestibulum id egestas nisl. Duis vitae tellus eu lacus vestibulum bibendum. Suspendisse potenti. Fusce odio augue, rhoncus et ipsum vitae, viverra volutpat libero. Vestibulum diam nibh, finibus at sodales sit amet, lobortis tincidunt sapien. Sed auctor, turpis sodales sagittis varius, urna eros dictum orci, ut ultricies lorem nisi eu diam.
+	noop				
+done	halt				end of program
+five	.fill	5
+neg1	.fill	-1
+stAdd	.fill	start			will contain address of start (2)

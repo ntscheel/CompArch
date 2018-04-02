@@ -1,0 +1,10 @@
+	lw	1	0	five 	#r1 = 5
+	lw	2	0	two 	#r2 = 6
+	add	3	1	2	#r3 = 5 + 2
+	beq	0	0	foo	#if r3 = 0, go to foo
+	add	4	3	2	#r4 = 7 + 2
+	halt
+foo	add	4	3	3	#r4 = 7 + 7
+	halt
+five	.fill	5
+two	.fill	2
